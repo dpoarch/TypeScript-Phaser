@@ -1,0 +1,103 @@
+{
+  "name": "phaser-breakout",
+  "version": "0.3.0",
+  "description": "Breakout game made with Phaser 3",
+  "main": "index.js",
+  "scripts": {
+    "info": "npm-scripts-info",
+    "commit": "git add -A && git-cz",
+    "build": "webpack --config webpack.prod.babel.js",
+    "start": "webpack-dev-server --open --config webpack.dev.babel.js",
+    "lint": "tslint --config tslint.json --project tsconfig.json --format stylish src/**/*.ts --exclude src/**/*.d.ts",
+    "test": "mocha-webpack",
+    "test:watch": "mocha-webpack --watch",
+    "test:coverage": "cross-env NODE_ENV=coverage nyc mocha-webpack \"test/**/*.ts\"",
+    "ci:build": "cross-env NODE_ENV=travis npm run build",
+    "ci:codecov": "codecov",
+    "ci:semantic-release": "semantic-release"
+  },
+  "scripts-info": {
+    "info": "Display help information about available scripts",
+    "commit": "Stage and commit all current changes using Commitizen",
+    "build": "Build all deliverables",
+    "start": "Start server and watch for changes",
+    "lint": "Analyze source code for errors",
+    "test": "Run the tests",
+    "test:watch": "Run the tests and watch for changes",
+    "test:coverage": "Run the tests and report coverage",
+    "ci:build": "Build all deliverables (Travis)",
+    "ci:codecov": "Upload test coverage to Codecov",
+    "ci:semantic-release": "Publish release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nunof07/phaser-breakout.git"
+  },
+  "author": "Nuno Freitas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nunof07/phaser-breakout/issues"
+  },
+  "homepage": "https://github.com/nunof07/phaser-breakout#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "^2.0.1",
+    "@semantic-release/git": "^4.0.1",
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
+    "@types/node": "^9.4.7",
+    "@types/ramda": "^0.25.20",
+    "@types/random-js": "^1.0.30",
+    "awesome-typescript-loader": "^4.0.1",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "canvas-prebuilt": "^2.0.0-alpha.5",
+    "chai": "^4.1.2",
+    "clean-terminal-webpack-plugin": "^1.0.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "codecov": "^3.0.0",
+    "commitizen": "^2.9.6",
+    "copy-webpack-plugin": "^4.5.1",
+    "cross-env": "^5.1.4",
+    "cz-conventional-changelog": "^2.1.0",
+    "fork-ts-checker-webpack-plugin": "^0.4.1",
+    "greenkeeper-lockfile": "^1.14.0",
+    "hard-source-webpack-plugin": "^0.6.4",
+    "html-webpack-plugin": "^3.0.6",
+    "html-webpack-template": "^6.1.0",
+    "istanbul-instrumenter-loader": "^3.0.0",
+    "jsdom": "^11.6.2",
+    "license-banner-webpack-plugin": "^1.0.0",
+    "mocha": "^5.0.4",
+    "mocha-webpack": "^1.0.1",
+    "npm-scripts-info": "^0.3.7",
+    "nyc": "^11.4.1",
+    "raw-loader": "^0.5.1",
+    "semantic-release": "^15.0.2",
+    "tslint": "^5.9.1",
+    "tslint-eslint-rules": "^5.1.0",
+    "tslint-immutable": "^4.5.2",
+    "tslint-microsoft-contrib": "^5.0.3",
+    "tslint-no-subclass": "^0.2.1",
+    "typescript": "^2.7.2",
+    "uglifyjs-webpack-plugin": "^1.2.2",
+    "webpack": "^3.11.0",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.0.0",
+    "webpack-merge": "^4.1.2",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "format-duration": "^1.1.0",
+    "phaser": "^3.1.2",
+    "ramda": "^0.25.0",
+    "random-js": "^1.0.8"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
+}

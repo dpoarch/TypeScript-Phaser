@@ -1,0 +1,5 @@
+--require test-setup.js
+--webpack-config webpack.test.js
+--recursive
+--exit
+test/**/*.ts

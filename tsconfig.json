@@ -1,0 +1,58 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "alwaysStrict": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strictFunctionTypes": true,
+        "strictNullChecks": true,
+        "skipLibCheck": true,
+        "paths": {
+            "@src/*": ["src/*"],
+            "@config/*": ["src/config/*"],
+            "@display/*": ["src/display/*"],
+            "@game/*": ["src/game/*"],
+            "@physics/*": ["src/physics/*"],
+            "@input/*": ["src/input/*"],
+            "@systems/*": ["src/systems/*"]
+        }
+    },
+    "files": [
+        "./src/index.ts"
+    ],
+    "include": [
+        "src/**/*",
+        "test/**/*"
+    ],
+    "exclude": [
+        "*.d.ts",
+        "dist",
+        "node_modules"
+    ],
+    "awesomeTypescriptLoaderOptions": {
+        "useCache": true,
+        "transpileOnly": true,
+        "forceIsolatedModules": true,
+        "reportFiles": [
+            "src/**/*.ts",
+            "test/**/*.ts"
+        ],
+        "useBabel": true,
+        "babelOptions": {
+            "babelrc": false,
+            "presets": [
+                ["env"]
+            ],
+            "plugins": [
+                ["transform-runtime"]
+            ]
+        }
+    }
+}
